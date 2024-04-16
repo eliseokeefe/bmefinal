@@ -1,11 +1,9 @@
 # Data Processing
 import pandas as pd
 import numpy as np
-
-# Modelling
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, confusion_matrix, precision_recall_curve, precision_score, recall_score, ConfusionMatrixDisplay, roc_curve
-from sklearn.model_selection import RandomizedSearchCV, train_test_split
+from sklearn.metrics import accuracy_score, confusion_matrix, ConfusionMatrixDisplay
+from sklearn.model_selection import train_test_split
 from scipy.stats import randint
 
 from ucimlrepo import fetch_ucirepo 
