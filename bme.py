@@ -46,6 +46,27 @@ breast_cancer['diagnosis'] = breast_cancer['diagnosis'].map({'M': 0, 'B': 1})
 X = breast_cancer.iloc[:,1:31]
 y = breast_cancer.iloc[:,0]
 
+import seaborn as sns
+
+y = breast_cancer.iloc[:,0]
+
+# Create graphs of every feature
+for feature in X.columns:
+    plt.figure(figsize=(8, 6))
+    sns.histplot(data=breast_cancer, x=feature, hue='diagnosis', kde=True)
+    plt.title(f'{feature} Distribution')
+    plt.xlabel(feature)
+    plt.ylabel('Count')
+    plt.legend(['Benign', 'Malignant'])
+    plt.show()
+
+# Create correlation matrix
+correlation_matrix = breast_cancer.corr()
+plt.figure(figsize=(12, 10))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
+plt.title('Correlation Matrix')
+plt.show()
+
 Xtrain, Xtest, ytrain, ytest = train_test_split(X, y, test_size=0.4, random_state=42)
 
 rf_model = RandomForestClassifier(n_estimators=20, random_state=42)
