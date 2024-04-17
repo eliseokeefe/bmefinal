@@ -1,6 +1,7 @@
 # Data Processing
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, confusion_matrix, ConfusionMatrixDisplay
 from sklearn.model_selection import train_test_split
@@ -51,6 +52,7 @@ import seaborn as sns
 y = breast_cancer.iloc[:,0]
 
 # Create graphs of every feature
+
 for feature in X.columns:
     plt.figure(figsize=(8, 6))
     sns.histplot(data=breast_cancer, x=feature, hue='diagnosis', kde=True)
@@ -59,6 +61,7 @@ for feature in X.columns:
     plt.ylabel('Count')
     plt.legend(['Benign', 'Malignant'])
     plt.show()
+
 
 # Create correlation matrix
 correlation_matrix = breast_cancer.corr()
@@ -75,7 +78,6 @@ rf_predictions = rf_model.predict(Xtest)
 
 rf_accuracy = accuracy_score(ytest, rf_predictions)
 print("RandomForestClassifier model:", rf_accuracy)
-import matplotlib.pyplot as plt
 
 # Confusion Matrix
 cm = confusion_matrix(ytest, rf_predictions)
