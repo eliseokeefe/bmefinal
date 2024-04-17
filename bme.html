@@ -5,37 +5,41 @@
     <link rel="stylesheet" type="text/css" href="bme.css">
 </head>
 <body>
-    <form action="submit.php" method="post">
-        <label for="radius_mean">radius_mean:</label>
-        <input type="text" id="radius_mean" name="radius_mean"><br>
+    <h1> Breast Cancer Diagnostic Tool</h1>
+    <img src="https://images.squarespace-cdn.com/content/57b21b67197aea37dfb7c157/1571627914942-PMEF6ISFIQILU7O3C3OX/Breast-Cancer-Ribbon-PNG-Image.png?content-type=image%2Fpng" height="100" alt="Image of Breast Cancer Awareness Ribbon" title="Breast Cancer Awareness">
+    <h2>This website is designed to take in data about a patient's biospy and quickly analyze it for different stages and types of breast cancer.</h2>
+    <p> For each of the following boxes, please input the corresponding data about the patient's biopsy: </p>
+    <label for="Radius of Biopsy">Radius:</label>
+        <input type="text" id="Radius of Biopsy" name="Radius of Biopsy"><br>
 
-        <label for="texture_mean">texture_mean:</label>
+        <label for="Texture of Biopsy">Texture:</label>
         <input type="text" id="texture_mean" name="texture_mean"><br>
 
-        <label for="perimeter_mean">perimeter_mean:</label>
+        <label for="Perimeter of Biopsy">Perimeter:</label>
         <input type="text" id="perimeter_mean" name="perimeter_mean"><br>
 
-        <!-- Add more input fields for the remaining attributes -->
-        <label for="area_mean">area_mean:</label>
+        <label for="Area of Biopsy">Area:</label>
         <input type="text" id="area_mean" name="area_mean"><br>
 
-        <label for="smoothness_mean">smoothness_mean:</label>
+        <label for="Smoothness of Biopsy">Smoothness:</label>
         <input type="text" id="smoothness_mean" name="smoothness_mean"><br>
 
-        <label for="compactness_mean">compactness_mean:</label>
+        <label for="Compactness of Biopsy">Compactness:</label>
         <input type="text" id="compactness_mean" name="compactness_mean"><br>
 
-        <label for="concavity_mean">concavity_mean:</label>
+        <label for="Concavity of Biopsy">Concavity:</label>
         <input type="text" id="concavity_mean" name="concavity_mean"><br>
 
-        <label for="concave_points_mean">concave points_mean:</label>
+        <label for="Concave Points">concave points_mean:</label>
         <input type="text" id="concave_points_mean" name="concave_points_mean"><br>
 
-        <label for="symmetry_mean">symmetry_mean:</label>
+        <label for="Symmetry of Biopsy">symmetry_mean:</label>
         <input type="text" id="symmetry_mean" name="symmetry_mean"><br>
 
-        <label for="fractal_dimension_mean">fractal_dimension_mean:</label>
+        <label for="Fractal Dimension">fractal_dimension_mean:</label>
         <input type="text" id="fractal_dimension_mean" name="fractal_dimension_mean"><br>
+
+        <!-- Ask widder about how these should be presented to the user  -->
 
         <label for="radius_se">radius_se:</label>
         <input type="text" id="radius_se" name="radius_se"><br>
