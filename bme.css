@@ -6,9 +6,10 @@ body {
 form {
     margin: 20px;
     padding: 20px;
-    background-color: #fff;
+    background-color: #ffffff;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 label {
@@ -19,9 +20,10 @@ label {
 
 input[type="text"] {
     width: 200px;
-    padding: 5px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 input[type="submit"] {
@@ -31,8 +33,10 @@ input[type="submit"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
     background-color: #45a049;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
