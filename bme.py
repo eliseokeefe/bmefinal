@@ -26,8 +26,22 @@ X = liver_disease.iloc[:,0:10]
 y = liver_disease.iloc[:,10]
 """
 
+"""
+heart_disease_three = pd.read_csv("heart 2.csv")
+heart_disease_three = heart_disease_three.dropna()
+heart_disease_three['Sex'] = heart_disease_three['Sex'].map({'M': 0, 'F': 1})
+heart_disease_three['ChestPainType'] = heart_disease_three['ChestPainType'].map({'TA': 0, 'ATA': 1, 'NAP': 2, 'ASY': 3})
+heart_disease_three['RestingECG'] = heart_disease_three['RestingECG'].map({'Normal': 0, 'ST': 1, 'LVH': 2})
+heart_disease_three['ExerciseAngina'] = heart_disease_three['ExerciseAngina'].map({'N': 0, 'Y': 1})
+heart_disease_three['ST_Slope'] = heart_disease_three['ST_Slope'].map({'Up': 0, 'Flat': 1, 'Down': 2})
+
+X = heart_disease_three.iloc[:,0:11]
+y = heart_disease_three.iloc[:,11]
+"""
+
 breast_cancer = pd.read_csv("data.csv")
 breast_cancer = breast_cancer.drop(columns=['id'])
+print(breast_cancer.shape)
 breast_cancer['diagnosis'] = breast_cancer['diagnosis'].map({'M': 0, 'B': 1})
 X = breast_cancer.iloc[:,1:31]
 y = breast_cancer.iloc[:,0]
@@ -41,7 +55,6 @@ rf_predictions = rf_model.predict(Xtest)
 rf_accuracy = accuracy_score(ytest, rf_predictions)
 print("RandomForestClassifier model:", rf_accuracy)
 import matplotlib.pyplot as plt
-
 
 # Confusion Matrix
 cm = confusion_matrix(ytest, rf_predictions)
