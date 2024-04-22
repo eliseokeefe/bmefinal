@@ -16,7 +16,6 @@ breast_cancer['diagnosis'] = breast_cancer['diagnosis'].map({'M': 0, 'B': 1})
 X = breast_cancer.iloc[:,1:31]
 y = breast_cancer.iloc[:,0]
 
-"""
 if os.path.isfile("data.csv"):
     for feature in X.columns:
         plt.figure(figsize=(8, 6))
@@ -37,7 +36,7 @@ if os.path.isfile("data.csv"):
     plt.close()
 else:
     print("File 'data.csv' not found.")
-"""
+
 Xtrain, Xtest, ytrain, ytest = train_test_split(X, y, test_size=0.4, random_state=42)
 
 rf_model = RandomForestClassifier(n_estimators=20, random_state=42)
